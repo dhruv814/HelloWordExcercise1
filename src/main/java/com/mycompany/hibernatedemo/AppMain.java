@@ -42,9 +42,7 @@ public class AppMain {
         HelloWorld u = new HelloWorld();
         System.out.print("Enter message:");
         String msg = sc.next();
-        
         u.setMessage(msg);
-
         em.getTransaction().begin();
         em.persist(u);
         em.getTransaction().commit();
