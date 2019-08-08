@@ -30,8 +30,8 @@ public class AppMain {
     }
 
     public void retriveData() {
-        TypedQuery<User> q = em.createQuery("SELECT C FROM User C", User.class);
-        List<User> results = q.getResultList();
+        TypedQuery<HelloWorld> q = em.createQuery("SELECT C FROM HelloWorld C", HelloWorld.class);
+        List<HelloWorld> results = q.getResultList();
 
         results.forEach((u) -> {
             System.out.println(u);
@@ -39,7 +39,7 @@ public class AppMain {
     }
 
     public void storeData() {
-        User u = new User();
+        HelloWorld u = new HelloWorld();
         System.out.print("Enter message:");
         String msg = sc.next();
         

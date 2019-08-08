@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "helloworld")
-public class User implements Serializable {
+public class HelloWorld implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQUENCE1")
@@ -31,10 +31,10 @@ public class User implements Serializable {
     @Column(name = "message")
     private String message;
 
-    public User() {
+    public HelloWorld() {
     }
 
-    public User(int id, String message) {
+    public HelloWorld(int id, String message) {
         this.id = id;
         this.message = message;
     }
