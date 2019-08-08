@@ -62,7 +62,7 @@ public class AppMain {
                     break;
                 case 2:
                     appMain.storeData();
-
+                    
             }
 
         } finally {
