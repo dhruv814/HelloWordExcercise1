@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.hibernatedemo;
 
 import java.util.List;
@@ -11,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import static org.hibernate.bytecode.BytecodeLogger.LOGGER;
 
 /**
  *
@@ -34,7 +30,7 @@ public class AppMain {
         List<HelloWorld> results = q.getResultList();
 
         results.forEach((u) -> {
-            System.out.println(u);
+            LOGGER.info(u);
         });
     }
 
@@ -46,7 +42,7 @@ public class AppMain {
         em.getTransaction().begin();
         em.persist(u);
         em.getTransaction().commit();
-        System.out.println("Message is added!!");
+        LOGGER.info("Message is added!!");
     }
 
     public static void main(String[] args) {
